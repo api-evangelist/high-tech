@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/high-tech/refs/heads/main/json-schema/high-tech-bom-schema.json",
+  "title": "High Tech Bill of Materials",
+  "description": "A Bill of Materials (BoM) — the ordered list of every component required to build one unit of a hardware product. Each line references one or more acceptable MPNs (alternates) with reference designators and a quantity.",
+  "type": "object",
+  "required": ["bomId", "lines"],
+  "properties": {
+    "bomId": { "type": "string", "description": "Stable identifier for this BoM revision." },
+    "name": { "type": "string" },
+    "revision": { "type": "string", "example": "rev-A" },
+    "product": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "partNumber": { "type": "string" }
+      }
+    },
+    "buildQuantity": { "type": "integer", "minimum": 1, "default": 1 },
+    "lines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["lineId", "quantity", "alternates"],
+        "properties": {
+          "lineId": { "type": "string" },
+          "quantity": { "type": "integer", "minimum": 1, "description": "Quantity per assembly." },
+          "referenceDesignators": {
+            "type": "array",
+            "items": { "type": "string", "example": "R1" }
+          },
+          "description": { "type": "string" },
+          "doNotPopulate": { "type": "boolean", "default": false },
+          "alternates": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["mpn", "manufacturer"],
+              "properties": {
+                "mpn": { "type": "string" },
+                "manufacturer": { "type": "string" },
+                "preferred": { "type": "boolean", "default": false }
+              }
+            }
+          }
+        }
+      }
+    },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "modifiedAt": { "type": "string", "format": "date-time" }
+  }
+}

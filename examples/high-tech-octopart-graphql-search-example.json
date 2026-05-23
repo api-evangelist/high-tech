@@ -1,0 +1,74 @@
+{
+  "description": "Search Nexar Supply (Octopart) for an MPN and return the canonical Component record fields used by this index.",
+  "request": {
+    "method": "POST",
+    "url": "https://api.nexar.com/graphql",
+    "headers": {
+      "Authorization": "Bearer <access-token>",
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "body": {
+      "query": "query SearchMpn($q: String!) { supSearchMpn(q: $q, limit: 1) { hits results { part { mpn manufacturer { name } shortDescription category { path } bestDatasheet { url } specs { attribute { name } displayValue } lifecycleStatus medianPrice1000 { price currency } sellers { company { name } offers { sku inventoryLevel moq prices { quantity price currency } } } } } } }",
+      "variables": { "q": "STM32F407VGT6" }
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "data": {
+        "supSearchMpn": {
+          "hits": 1,
+          "results": [
+            {
+              "part": {
+                "mpn": "STM32F407VGT6",
+                "manufacturer": { "name": "STMicroelectronics" },
+                "shortDescription": "ARM Cortex-M4 32-bit MCU, 1MB Flash, 192KB RAM, 168MHz, LQFP-100",
+                "category": { "path": ["Integrated Circuits", "Embedded", "Microcontrollers", "ARM Microcontrollers"] },
+                "bestDatasheet": { "url": "https://www.st.com/resource/en/datasheet/stm32f407vg.pdf" },
+                "specs": [
+                  { "attribute": { "name": "Core Processor" }, "displayValue": "ARM Cortex-M4" },
+                  { "attribute": { "name": "Speed" }, "displayValue": "168 MHz" },
+                  { "attribute": { "name": "Program Memory Size" }, "displayValue": "1 MB" }
+                ],
+                "lifecycleStatus": "Active",
+                "medianPrice1000": { "price": 9.43, "currency": "USD" },
+                "sellers": [
+                  {
+                    "company": { "name": "Digi-Key" },
+                    "offers": [
+                      {
+                        "sku": "497-11767-ND",
+                        "inventoryLevel": 4218,
+                        "moq": 1,
+                        "prices": [
+                          { "quantity": 1, "price": 14.32, "currency": "USD" },
+                          { "quantity": 1000, "price": 8.74, "currency": "USD" }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "company": { "name": "Mouser" },
+                    "offers": [
+                      {
+                        "sku": "511-STM32F407VGT6",
+                        "inventoryLevel": 1872,
+                        "moq": 1,
+                        "prices": [
+                          { "quantity": 1, "price": 14.51, "currency": "USD" },
+                          { "quantity": 100, "price": 10.34, "currency": "USD" }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

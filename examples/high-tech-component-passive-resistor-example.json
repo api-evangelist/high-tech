@@ -1,0 +1,63 @@
+{
+  "@context": "https://raw.githubusercontent.com/api-evangelist/high-tech/refs/heads/main/json-ld/high-tech-context.jsonld",
+  "@type": "Component",
+  "mpn": "RC0402FR-0710KL",
+  "manufacturer": {
+    "@type": "Manufacturer",
+    "name": "Yageo",
+    "homepage": "https://www.yageo.com/"
+  },
+  "description": "10K Ohm 1% 1/16W 0402 Thick Film Chip Resistor",
+  "category": {
+    "path": ["Resistors", "Chip Resistor - Surface Mount"]
+  },
+  "datasheets": [
+    { "url": "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf", "kind": "datasheet", "language": "en" }
+  ],
+  "specifications": [
+    { "name": "Resistance", "value": "10", "displayValue": "10 kOhm", "unit": "kOhm" },
+    { "name": "Tolerance", "value": "1", "unit": "%" },
+    { "name": "Power Rating", "value": "0.0625", "unit": "W" },
+    { "name": "Temperature Coefficient", "value": "100", "unit": "ppm/C" },
+    { "name": "Operating Temperature", "min": -55, "max": 155, "unit": "C" }
+  ],
+  "lifecycle": { "status": "active" },
+  "compliance": [
+    { "scheme": "RoHS", "status": "Compliant" },
+    { "scheme": "REACH", "status": "Compliant" },
+    { "scheme": "Halogen-Free", "status": "Compliant" }
+  ],
+  "package": {
+    "name": "0402 (1005 Metric)",
+    "mountingType": "SMD",
+    "pinCount": 2,
+    "dimensions": { "length": 1.0, "width": 0.5, "height": 0.35, "unit": "mm" }
+  },
+  "offers": [
+    {
+      "seller": { "name": "Digi-Key", "authorized": true },
+      "sku": "311-10.0KLRCT-ND",
+      "stock": 982400,
+      "moq": 1,
+      "multipleOrderQuantity": 1,
+      "packagingOptions": ["Cut Tape", "Tape & Reel", "Digi-Reel"],
+      "priceBreaks": [
+        { "quantity": 1, "price": 0.10, "currency": "USD" },
+        { "quantity": 100, "price": 0.013, "currency": "USD" },
+        { "quantity": 5000, "price": 0.0024, "currency": "USD" }
+      ],
+      "updatedAt": "2026-05-23T12:00:00Z"
+    },
+    {
+      "seller": { "name": "Mouser", "authorized": true },
+      "sku": "603-RC0402FR-0710KL",
+      "stock": 460000,
+      "moq": 1,
+      "priceBreaks": [
+        { "quantity": 1, "price": 0.10, "currency": "USD" },
+        { "quantity": 5000, "price": 0.0028, "currency": "USD" }
+      ],
+      "updatedAt": "2026-05-23T12:00:00Z"
+    }
+  ]
+}

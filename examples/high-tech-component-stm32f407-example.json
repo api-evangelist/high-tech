@@ -1,0 +1,116 @@
+{
+  "@context": "https://raw.githubusercontent.com/api-evangelist/high-tech/refs/heads/main/json-ld/high-tech-context.jsonld",
+  "@type": "Component",
+  "mpn": "STM32F407VGT6",
+  "manufacturer": {
+    "@type": "Manufacturer",
+    "name": "STMicroelectronics",
+    "homepage": "https://www.st.com/"
+  },
+  "description": "ARM Cortex-M4 32-bit MCU, 1MB Flash, 192KB RAM, 168MHz, LQFP-100",
+  "category": {
+    "path": ["Integrated Circuits", "Embedded", "Microcontrollers", "ARM Microcontrollers"]
+  },
+  "datasheets": [
+    {
+      "url": "https://www.st.com/resource/en/datasheet/stm32f407vg.pdf",
+      "title": "STM32F407VG Datasheet",
+      "kind": "datasheet",
+      "language": "en"
+    },
+    {
+      "url": "https://www.st.com/resource/en/reference_manual/rm0090-stm32f405415-stm32f407417-stm32f427437-and-stm32f429439-advanced-armbased-32bit-mcus-stmicroelectronics.pdf",
+      "title": "RM0090 Reference Manual",
+      "kind": "reference-manual",
+      "language": "en"
+    }
+  ],
+  "specifications": [
+    { "name": "Core Processor", "value": "ARM Cortex-M4" },
+    { "name": "Core Size", "value": "32-bit" },
+    { "name": "Speed", "value": "168", "unit": "MHz" },
+    { "name": "Program Memory Size", "value": "1024", "unit": "KB" },
+    { "name": "RAM Size", "value": "192", "unit": "KB" },
+    { "name": "Operating Temperature", "min": -40, "max": 85, "unit": "C" },
+    { "name": "Voltage Supply", "min": 1.8, "max": 3.6, "unit": "V" }
+  ],
+  "lifecycle": {
+    "status": "active"
+  },
+  "compliance": [
+    { "scheme": "RoHS", "status": "Compliant", "asOf": "2024-01-01" },
+    { "scheme": "REACH", "status": "Compliant", "asOf": "2024-01-01" },
+    { "scheme": "Halogen-Free", "status": "Compliant" }
+  ],
+  "package": {
+    "name": "LQFP-100",
+    "mountingType": "SMD",
+    "pinCount": 100,
+    "dimensions": { "length": 14, "width": 14, "height": 1.4, "unit": "mm" }
+  },
+  "cad": [
+    {
+      "provider": "SnapEDA",
+      "symbolUrl": "https://www.snapeda.com/parts/STM32F407VGT6/STMicroelectronics/view-part/?ref=eda",
+      "footprintUrl": "https://www.snapeda.com/parts/STM32F407VGT6/STMicroelectronics/view-part/?ref=eda",
+      "model3dUrl": "https://www.snapeda.com/parts/STM32F407VGT6/STMicroelectronics/view-part/?ref=eda",
+      "ecadFormats": ["altium", "kicad", "eagle", "orcad"]
+    },
+    {
+      "provider": "UltraLibrarian",
+      "ecadFormats": ["altium", "kicad", "eagle", "orcad", "cadence", "mentor"]
+    }
+  ],
+  "offers": [
+    {
+      "seller": { "name": "Digi-Key", "homepage": "https://www.digikey.com/", "authorized": true },
+      "sku": "497-11767-ND",
+      "productUrl": "https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F407VGT6/2747938",
+      "stock": 4218,
+      "moq": 1,
+      "multipleOrderQuantity": 1,
+      "packagingOptions": ["Cut Tape", "Tray", "Tape & Reel"],
+      "leadTimeDays": 0,
+      "priceBreaks": [
+        { "quantity": 1, "price": 14.32, "currency": "USD" },
+        { "quantity": 10, "price": 12.41, "currency": "USD" },
+        { "quantity": 100, "price": 10.18, "currency": "USD" },
+        { "quantity": 1000, "price": 8.74, "currency": "USD" }
+      ],
+      "updatedAt": "2026-05-23T12:00:00Z"
+    },
+    {
+      "seller": { "name": "Mouser", "homepage": "https://www.mouser.com/", "authorized": true },
+      "sku": "511-STM32F407VGT6",
+      "productUrl": "https://www.mouser.com/ProductDetail/STMicroelectronics/STM32F407VGT6",
+      "stock": 1872,
+      "moq": 1,
+      "leadTimeDays": 0,
+      "priceBreaks": [
+        { "quantity": 1, "price": 14.51, "currency": "USD" },
+        { "quantity": 25, "price": 11.85, "currency": "USD" },
+        { "quantity": 100, "price": 10.34, "currency": "USD" }
+      ],
+      "updatedAt": "2026-05-23T12:00:00Z"
+    },
+    {
+      "seller": { "name": "Arrow", "homepage": "https://www.arrow.com/", "authorized": true },
+      "sku": "STM32F407VGT6",
+      "productUrl": "https://www.arrow.com/en/products/stm32f407vgt6/stmicroelectronics",
+      "stock": 6210,
+      "moq": 1,
+      "leadTimeDays": 12,
+      "priceBreaks": [
+        { "quantity": 1, "price": 13.98, "currency": "USD" },
+        { "quantity": 100, "price": 9.87, "currency": "USD" }
+      ],
+      "updatedAt": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "identifiers": {
+    "octopartId": "9b3b7e1c8d4a4f01",
+    "digikeyPartNumber": "497-11767-ND",
+    "mouserPartNumber": "511-STM32F407VGT6",
+    "arrowPartNumber": "STM32F407VGT6"
+  }
+}

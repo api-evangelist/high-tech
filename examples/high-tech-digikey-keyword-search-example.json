@@ -1,0 +1,62 @@
+{
+  "description": "Digi-Key Product Information V4 keyword search returning the canonical Component fields used by this index.",
+  "request": {
+    "method": "POST",
+    "url": "https://api.digikey.com/products/v4/search/keyword",
+    "headers": {
+      "Authorization": "Bearer <access-token>",
+      "X-DIGIKEY-Client-Id": "<client-id>",
+      "X-DIGIKEY-Locale-Site": "US",
+      "X-DIGIKEY-Locale-Language": "en",
+      "X-DIGIKEY-Locale-Currency": "USD",
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "body": {
+      "Keywords": "STM32F407VGT6",
+      "Limit": 1,
+      "Offset": 0
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "ProductsCount": 1,
+      "Products": [
+        {
+          "DigiKeyProductNumber": "497-11767-ND",
+          "ManufacturerProductNumber": "STM32F407VGT6",
+          "Manufacturer": { "Id": 497, "Name": "STMicroelectronics" },
+          "ProductDescription": "IC MCU 32BIT 1MB FLASH 100LQFP",
+          "DetailedDescription": "ARM Cortex-M4 STM32F4 Microcontroller IC 32-Bit Single-Core 168MHz 1MB (1M x 8) FLASH 100-LQFP (14x14)",
+          "Category": {
+            "Name": "Integrated Circuits (ICs)",
+            "ChildCategories": [
+              { "Name": "Embedded - Microcontrollers" }
+            ]
+          },
+          "PrimaryDatasheet": "https://www.st.com/resource/en/datasheet/stm32f407vg.pdf",
+          "PrimaryPhoto": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/3851/MFG_LQFP-100.jpg",
+          "ProductUrl": "https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F407VGT6/2747938",
+          "UnitPrice": 14.32,
+          "QuantityAvailable": 4218,
+          "MinimumOrderQuantity": 1,
+          "StandardPricing": [
+            { "BreakQuantity": 1, "UnitPrice": 14.32, "TotalPrice": 14.32 },
+            { "BreakQuantity": 10, "UnitPrice": 12.41, "TotalPrice": 124.10 },
+            { "BreakQuantity": 100, "UnitPrice": 10.18, "TotalPrice": 1018.00 },
+            { "BreakQuantity": 1000, "UnitPrice": 8.74, "TotalPrice": 8740.00 }
+          ],
+          "ProductStatus": "Active",
+          "Parameters": [
+            { "Parameter": "Core Processor", "Value": "ARM Cortex-M4" },
+            { "Parameter": "Speed", "Value": "168MHz" },
+            { "Parameter": "Program Memory Size", "Value": "1MB (1M x 8)" },
+            { "Parameter": "RAM Size", "Value": "192K x 8" },
+            { "Parameter": "Package / Case", "Value": "100-LQFP" }
+          ]
+        }
+      ]
+    }
+  }
+}

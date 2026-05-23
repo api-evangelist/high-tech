@@ -1,0 +1,82 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://schema.org/",
+    "schema": "https://schema.org/",
+    "ht": "https://api-evangelist.github.io/high-tech/ns/",
+    "qudt": "http://qudt.org/schema/qudt/",
+    "unit": "http://qudt.org/vocab/unit/",
+    "gs1": "https://gs1.org/voc/",
+
+    "Component": "ht:Component",
+    "Manufacturer": "schema:Organization",
+    "Distributor": "schema:Organization",
+    "Datasheet": "schema:DigitalDocument",
+    "Specification": "schema:PropertyValue",
+    "Package": "ht:Package",
+    "CadModel": "ht:CadModel",
+    "BillOfMaterials": "ht:BillOfMaterials",
+    "Offer": "schema:Offer",
+    "PriceBreak": "schema:UnitPriceSpecification",
+
+    "mpn": { "@id": "schema:mpn" },
+    "gtin": { "@id": "schema:gtin" },
+    "manufacturer": { "@id": "schema:manufacturer", "@type": "@id" },
+    "brand": { "@id": "schema:brand" },
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": { "@id": "schema:url", "@type": "@id" },
+    "image": { "@id": "schema:image", "@type": "@id" },
+    "category": { "@id": "schema:category" },
+
+    "datasheets": { "@id": "ht:datasheet", "@container": "@set", "@type": "@id" },
+    "specifications": { "@id": "schema:additionalProperty", "@container": "@set" },
+    "value": "schema:value",
+    "unitCode": "schema:unitCode",
+    "minValue": "schema:minValue",
+    "maxValue": "schema:maxValue",
+
+    "package": "ht:package",
+    "mountingType": "ht:mountingType",
+    "pinCount": "ht:pinCount",
+
+    "cad": { "@id": "ht:cadModel", "@container": "@set" },
+    "symbolUrl": { "@id": "ht:symbolUrl", "@type": "@id" },
+    "footprintUrl": { "@id": "ht:footprintUrl", "@type": "@id" },
+    "model3dUrl": { "@id": "ht:model3dUrl", "@type": "@id" },
+
+    "lifecycle": "ht:lifecycle",
+    "lifecycleStatus": "ht:lifecycleStatus",
+    "eolDate": { "@id": "ht:eolDate", "@type": "schema:Date" },
+    "ltbDate": { "@id": "ht:ltbDate", "@type": "schema:Date" },
+
+    "compliance": { "@id": "ht:compliance", "@container": "@set" },
+    "rohs": "ht:rohs",
+    "reach": "ht:reach",
+
+    "offers": { "@id": "schema:offers", "@container": "@set" },
+    "seller": { "@id": "schema:seller", "@type": "@id" },
+    "sku": "schema:sku",
+    "availability": "schema:availability",
+    "stock": "ht:stock",
+    "moq": "ht:minimumOrderQuantity",
+    "leadTimeDays": "ht:leadTimeDays",
+    "priceBreaks": { "@id": "schema:priceSpecification", "@container": "@set" },
+    "quantity": "schema:eligibleQuantity",
+    "price": "schema:price",
+    "currency": "schema:priceCurrency",
+    "productUrl": { "@id": "schema:url", "@type": "@id" },
+
+    "bomId": "schema:identifier",
+    "revision": "schema:version",
+    "lines": { "@id": "ht:bomLine", "@container": "@set" },
+    "referenceDesignators": { "@id": "ht:referenceDesignator", "@container": "@set" },
+    "alternates": { "@id": "ht:alternate", "@container": "@set" },
+    "preferred": "ht:preferred",
+    "doNotPopulate": "ht:doNotPopulate",
+
+    "createdAt": { "@id": "schema:dateCreated", "@type": "schema:DateTime" },
+    "modifiedAt": { "@id": "schema:dateModified", "@type": "schema:DateTime" },
+    "updatedAt": { "@id": "schema:dateModified", "@type": "schema:DateTime" }
+  }
+}

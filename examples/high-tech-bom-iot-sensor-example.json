@@ -1,0 +1,81 @@
+{
+  "@context": "https://raw.githubusercontent.com/api-evangelist/high-tech/refs/heads/main/json-ld/high-tech-context.jsonld",
+  "@type": "BillOfMaterials",
+  "bomId": "iot-sensor-node-v1.2",
+  "name": "IoT Sensor Node Reference Board",
+  "revision": "rev-B",
+  "product": { "name": "Sensor Node", "partNumber": "SN-100" },
+  "buildQuantity": 1,
+  "createdAt": "2026-04-12T09:30:00Z",
+  "modifiedAt": "2026-05-22T16:14:00Z",
+  "lines": [
+    {
+      "lineId": "U1",
+      "quantity": 1,
+      "referenceDesignators": ["U1"],
+      "description": "Main MCU — STM32WLE5 Cortex-M4 + LoRa radio",
+      "alternates": [
+        { "mpn": "STM32WLE5CCU6", "manufacturer": "STMicroelectronics", "preferred": true }
+      ]
+    },
+    {
+      "lineId": "U2",
+      "quantity": 1,
+      "referenceDesignators": ["U2"],
+      "description": "Temperature & humidity sensor, I2C",
+      "alternates": [
+        { "mpn": "SHT40-AD1B-R2", "manufacturer": "Sensirion", "preferred": true },
+        { "mpn": "HDC2080DMBR", "manufacturer": "Texas Instruments" }
+      ]
+    },
+    {
+      "lineId": "U3",
+      "quantity": 1,
+      "referenceDesignators": ["U3"],
+      "description": "3.3V LDO regulator, 300 mA",
+      "alternates": [
+        { "mpn": "MIC5219-3.3YM5-TR", "manufacturer": "Microchip Technology", "preferred": true },
+        { "mpn": "AP2127K-3.3TRG1", "manufacturer": "Diodes Incorporated" }
+      ]
+    },
+    {
+      "lineId": "R1-R4",
+      "quantity": 4,
+      "referenceDesignators": ["R1", "R2", "R3", "R4"],
+      "description": "10K 1% 0402 pull-up resistors",
+      "alternates": [
+        { "mpn": "RC0402FR-0710KL", "manufacturer": "Yageo", "preferred": true },
+        { "mpn": "CRCW040210K0FKED", "manufacturer": "Vishay" }
+      ]
+    },
+    {
+      "lineId": "C1-C8",
+      "quantity": 8,
+      "referenceDesignators": ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"],
+      "description": "0.1uF 16V X7R 0402 decoupling caps",
+      "alternates": [
+        { "mpn": "CC0402KRX7R7BB104", "manufacturer": "Yageo", "preferred": true },
+        { "mpn": "GRM155R71C104KA88D", "manufacturer": "Murata" }
+      ]
+    },
+    {
+      "lineId": "J1",
+      "quantity": 1,
+      "referenceDesignators": ["J1"],
+      "description": "USB Type-C receptacle",
+      "alternates": [
+        { "mpn": "USB4085-GF-A", "manufacturer": "GCT", "preferred": true }
+      ]
+    },
+    {
+      "lineId": "TP1-TP4",
+      "quantity": 4,
+      "referenceDesignators": ["TP1", "TP2", "TP3", "TP4"],
+      "description": "Test points — do not populate in production",
+      "doNotPopulate": true,
+      "alternates": [
+        { "mpn": "5015", "manufacturer": "Keystone Electronics", "preferred": true }
+      ]
+    }
+  ]
+}

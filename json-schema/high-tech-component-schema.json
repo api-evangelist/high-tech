@@ -1,0 +1,237 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/high-tech/refs/heads/main/json-schema/high-tech-component-schema.json",
+  "title": "High Tech Electronic Component",
+  "description": "An authoritative record for an electronic component, normalized across distributor and manufacturer APIs (Octopart / Nexar, Digi-Key, Mouser, Arrow, Avnet, Newark). Anchored on the Manufacturer Part Number (MPN) + Manufacturer pair.",
+  "type": "object",
+  "required": ["mpn", "manufacturer"],
+  "properties": {
+    "mpn": {
+      "type": "string",
+      "description": "Manufacturer Part Number — the canonical identifier assigned by the component manufacturer.",
+      "example": "STM32F407VGT6"
+    },
+    "manufacturer": {
+      "$ref": "#/$defs/Manufacturer",
+      "description": "The legal manufacturer of this component."
+    },
+    "description": {
+      "type": "string",
+      "description": "Short marketing / catalog description for the part.",
+      "example": "ARM Cortex-M4 32-bit MCU, 1MB Flash, 168MHz, LQFP-100"
+    },
+    "category": {
+      "$ref": "#/$defs/Category",
+      "description": "Hierarchical category for the part (e.g. Integrated Circuits > Microcontrollers > ARM)."
+    },
+    "datasheets": {
+      "type": "array",
+      "description": "URLs to manufacturer datasheets, application notes, and reference designs.",
+      "items": { "$ref": "#/$defs/Document" }
+    },
+    "specifications": {
+      "type": "array",
+      "description": "Parametric specifications — typed name/value pairs with units.",
+      "items": { "$ref": "#/$defs/Specification" }
+    },
+    "lifecycle": {
+      "$ref": "#/$defs/Lifecycle",
+      "description": "Lifecycle status (active, nrnd, obsolete, etc.) and replacement guidance."
+    },
+    "compliance": {
+      "type": "array",
+      "description": "Regulatory and environmental compliance statements (RoHS, REACH, conflict minerals, ECCN, HTS).",
+      "items": { "$ref": "#/$defs/Compliance" }
+    },
+    "package": {
+      "$ref": "#/$defs/Package",
+      "description": "Physical package, mounting type, and dimensional data."
+    },
+    "cad": {
+      "type": "array",
+      "description": "ECAD model references (symbols, footprints, 3D models) keyed by provider (SnapEDA, Ultra Librarian).",
+      "items": { "$ref": "#/$defs/CadModel" }
+    },
+    "offers": {
+      "type": "array",
+      "description": "Real-time pricing and availability from distributors.",
+      "items": { "$ref": "#/$defs/Offer" }
+    },
+    "media": {
+      "type": "array",
+      "description": "Product images and renders.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": { "type": "string", "format": "uri" },
+          "kind": { "type": "string", "enum": ["thumbnail", "image", "render", "video"] }
+        }
+      }
+    },
+    "identifiers": {
+      "type": "object",
+      "description": "Cross-distributor and standards identifiers for this MPN.",
+      "properties": {
+        "octopartId": { "type": "string", "description": "Octopart / Nexar internal part ID." },
+        "digikeyPartNumber": { "type": "string", "description": "Digi-Key catalog part number." },
+        "mouserPartNumber": { "type": "string", "description": "Mouser catalog part number." },
+        "arrowPartNumber": { "type": "string", "description": "Arrow Electronics part number." },
+        "avnetPartNumber": { "type": "string", "description": "Avnet part number." },
+        "newarkPartNumber": { "type": "string", "description": "Newark / element14 part number." },
+        "gtin": { "type": "string", "description": "GTIN/UPC if assigned." }
+      }
+    }
+  },
+  "$defs": {
+    "Manufacturer": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "example": "STMicroelectronics" },
+        "homepage": { "type": "string", "format": "uri" },
+        "aliases": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "Category": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Provider-specific category identifier." },
+        "path": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Ordered breadcrumb path from root to leaf category.",
+          "example": ["Integrated Circuits", "Microcontrollers", "ARM Microcontrollers"]
+        }
+      }
+    },
+    "Document": {
+      "type": "object",
+      "required": ["url"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "title": { "type": "string" },
+        "kind": {
+          "type": "string",
+          "enum": ["datasheet", "application-note", "reference-manual", "errata", "user-guide", "selector-guide", "pcn", "compliance"],
+          "default": "datasheet"
+        },
+        "language": { "type": "string", "description": "BCP-47 language tag.", "example": "en" }
+      }
+    },
+    "Specification": {
+      "type": "object",
+      "required": ["name", "value"],
+      "properties": {
+        "attribute": { "type": "string", "description": "Provider attribute id." },
+        "name": { "type": "string", "example": "Operating Voltage" },
+        "value": { "type": "string", "example": "1.8" },
+        "displayValue": { "type": "string", "example": "1.8 V to 3.6 V" },
+        "min": { "type": "number" },
+        "max": { "type": "number" },
+        "unit": { "type": "string", "example": "V" }
+      }
+    },
+    "Lifecycle": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["active", "preview", "production", "not-recommended-for-new-design", "last-time-buy", "obsolete", "unknown"],
+          "description": "Normalized lifecycle status across distributors."
+        },
+        "ltbDate": { "type": "string", "format": "date", "description": "Last-Time-Buy date when applicable." },
+        "eolDate": { "type": "string", "format": "date", "description": "End-of-Life date when applicable." },
+        "replacements": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Manufacturer-suggested replacement MPNs."
+        }
+      }
+    },
+    "Compliance": {
+      "type": "object",
+      "required": ["scheme", "status"],
+      "properties": {
+        "scheme": {
+          "type": "string",
+          "enum": ["RoHS", "REACH", "ConflictMinerals", "ECCN", "HTS", "Halogen-Free", "Lead-Free", "PFAS"],
+          "description": "Regulatory or compliance scheme."
+        },
+        "status": { "type": "string", "example": "Compliant" },
+        "url": { "type": "string", "format": "uri", "description": "Link to compliance statement PDF." },
+        "asOf": { "type": "string", "format": "date" }
+      }
+    },
+    "Package": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "example": "LQFP-100" },
+        "mountingType": { "type": "string", "enum": ["SMD", "Through-Hole", "Chassis", "Module"] },
+        "pinCount": { "type": "integer", "minimum": 0 },
+        "dimensions": {
+          "type": "object",
+          "properties": {
+            "length": { "type": "number" },
+            "width": { "type": "number" },
+            "height": { "type": "number" },
+            "unit": { "type": "string", "default": "mm" }
+          }
+        }
+      }
+    },
+    "CadModel": {
+      "type": "object",
+      "required": ["provider"],
+      "properties": {
+        "provider": { "type": "string", "enum": ["SnapEDA", "UltraLibrarian", "Altium365", "Manufacturer", "Other"] },
+        "symbolUrl": { "type": "string", "format": "uri" },
+        "footprintUrl": { "type": "string", "format": "uri" },
+        "model3dUrl": { "type": "string", "format": "uri" },
+        "ecadFormats": {
+          "type": "array",
+          "items": { "type": "string", "example": "altium" },
+          "description": "Supported ECAD tool formats (altium, kicad, eagle, orcad, cadence, mentor, etc.)."
+        }
+      }
+    },
+    "Offer": {
+      "type": "object",
+      "required": ["seller", "sku"],
+      "properties": {
+        "seller": {
+          "type": "object",
+          "required": ["name"],
+          "properties": {
+            "name": { "type": "string", "example": "Digi-Key" },
+            "homepage": { "type": "string", "format": "uri" },
+            "authorized": { "type": "boolean", "description": "Whether the seller is an authorized distributor for this manufacturer." }
+          }
+        },
+        "sku": { "type": "string", "description": "Distributor SKU / catalog part number." },
+        "productUrl": { "type": "string", "format": "uri" },
+        "stock": { "type": "integer", "minimum": 0, "description": "Quantity in stock." },
+        "moq": { "type": "integer", "minimum": 1, "description": "Minimum order quantity." },
+        "multipleOrderQuantity": { "type": "integer", "minimum": 1 },
+        "packagingOptions": {
+          "type": "array",
+          "items": { "type": "string", "example": "Cut Tape" }
+        },
+        "leadTimeDays": { "type": "integer", "minimum": 0 },
+        "priceBreaks": {
+          "type": "array",
+          "description": "Quantity-tiered pricing.",
+          "items": {
+            "type": "object",
+            "required": ["quantity", "price", "currency"],
+            "properties": {
+              "quantity": { "type": "integer", "minimum": 1 },
+              "price": { "type": "number", "minimum": 0 },
+              "currency": { "type": "string", "description": "ISO 4217 currency code.", "example": "USD" }
+            }
+          }
+        },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}

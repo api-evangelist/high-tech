@@ -1,0 +1,188 @@
+name: High Tech Domain Vocabulary
+provider: High Tech
+providerId: high-tech
+description: >-
+  Vocabulary for the high-tech electronic component supply chain —
+  covers component data, distribution, ECAD design assets,
+  manufacturer lifecycle status, environmental compliance, and
+  hardware bill-of-materials workflows.
+sources:
+  - Octopart / Nexar Supply (https://nexar.com/api)
+  - Digi-Key Product Information V4 (https://developer.digikey.com/products)
+  - Mouser Search API (https://www.mouser.com/api-search/)
+  - Arrow Pricing & Availability (https://developers.arrow.com/api/)
+  - SnapEDA (https://www.snapeda.com/)
+  - Ultra Librarian (https://www.ultralibrarian.com/)
+  - JEDEC component lifecycle terminology
+  - EU RoHS / REACH directives
+
+terms:
+
+  # Identity / Provenance
+  - term: MPN
+    aliases: [Manufacturer Part Number]
+    description: >-
+      The canonical identifier assigned by the manufacturer to a
+      specific component. The primary key for cross-distributor
+      lookup.
+  - term: Manufacturer
+    description: The legal entity that manufactures the component.
+  - term: Distributor
+    aliases: [Seller]
+    description: A reseller offering the component (Digi-Key, Mouser, Arrow, Avnet, Newark, etc.).
+  - term: Authorized Distributor
+    description: A distributor with a formal franchise from the manufacturer; pricing and lifecycle data are authoritative.
+  - term: Distributor SKU
+    aliases: [Distributor Part Number]
+    description: The catalog identifier a distributor assigns to its listing of an MPN (DKPN, Mouser P/N, Arrow P/N, etc.).
+  - term: GTIN
+    description: Global Trade Item Number, occasionally provided for packaged components.
+
+  # Documents
+  - term: Datasheet
+    description: Manufacturer technical document defining electrical characteristics, pinouts, and operating conditions.
+  - term: Application Note
+    aliases: [App Note]
+    description: Manufacturer-published document showing how to apply a part in a specific design.
+  - term: Reference Design
+    description: A full schematic / BoM / layout example provided by the manufacturer for a representative use case.
+  - term: Errata
+    description: Document listing known defects or limitations of a released part.
+  - term: PCN
+    aliases: [Product Change Notification]
+    description: Formal notice from a manufacturer announcing a change to a product (process, package, lifecycle).
+
+  # Categories / Functions
+  - term: Integrated Circuit
+    aliases: [IC]
+    description: Monolithic semiconductor device combining many transistors on a single die.
+  - term: Microcontroller
+    aliases: [MCU]
+    description: Integrated circuit containing a processor, memory, and peripherals on one chip.
+  - term: Microprocessor
+    aliases: [MPU]
+    description: Integrated circuit containing a processor without on-chip program memory or peripherals.
+  - term: SoC
+    aliases: [System on Chip]
+    description: A chip integrating CPU, memory, I/O, and often graphics or radio on a single die.
+  - term: FPGA
+    description: Field-Programmable Gate Array — reconfigurable logic device.
+  - term: Passive
+    description: Resistors, capacitors, inductors — components that do not introduce gain.
+  - term: Connector
+    description: Mechanical / electrical interconnect component.
+  - term: Sensor
+    description: Component that converts a physical quantity (temperature, pressure, motion, light) to an electrical signal.
+
+  # Packaging
+  - term: Package
+    description: The physical housing of a component (e.g. LQFP, BGA, SOT-23, 0402).
+  - term: SMD
+    aliases: [Surface Mount Device, SMT]
+    description: Component mounted directly on the surface of a PCB.
+  - term: Through-Hole
+    aliases: [THT]
+    description: Component with leads inserted through PCB holes and soldered on the opposite side.
+  - term: Pin Count
+    description: Number of electrically functional pins on the package.
+  - term: Cut Tape
+    description: Strip of tape-and-reel components in arbitrary quantities, typically sold by distributors.
+  - term: Reel
+    description: Full reel of tape-and-reel components in the manufacturer's standard quantity.
+  - term: Tray
+    description: Anti-static tray packaging for medium-pin-count ICs.
+  - term: Tube
+    description: Anti-static tube packaging for DIP / SOIC parts.
+
+  # Pricing / Availability
+  - term: Stock
+    aliases: [Inventory, Quantity Available]
+    description: Number of units a distributor currently has in stock for an offer.
+  - term: MOQ
+    aliases: [Minimum Order Quantity]
+    description: Smallest quantity a distributor will sell on a single order line.
+  - term: Multiple Order Quantity
+    aliases: [Order Multiple, Spq]
+    description: Increment in which the part must be ordered above MOQ.
+  - term: Price Break
+    description: Quantity tier at which the unit price changes.
+  - term: Lead Time
+    description: Quoted time from order placement to shipment for non-stock orders.
+  - term: Quote
+    description: Bound, time-limited price for a specific quantity at a specific distributor.
+
+  # Lifecycle (JEDEC-aligned)
+  - term: Preview
+    description: Part announced but not yet in production.
+  - term: Active
+    aliases: [Production]
+    description: Part in full production and recommended for new designs.
+  - term: NRND
+    aliases: [Not Recommended for New Design]
+    description: Part still in production but discouraged for new designs.
+  - term: Last-Time-Buy
+    aliases: [LTB]
+    description: Manufacturer-set deadline for final orders before discontinuation.
+  - term: Obsolete
+    aliases: [End of Life, EOL]
+    description: Part no longer manufactured.
+
+  # Compliance
+  - term: RoHS
+    description: EU Restriction of Hazardous Substances directive — restricts lead, mercury, cadmium, chromium VI, PBB, PBDE in electronic products.
+  - term: REACH
+    description: EU Registration, Evaluation, Authorisation and Restriction of Chemicals regulation; reports Substances of Very High Concern (SVHC) above 0.1% by weight.
+  - term: Conflict Minerals
+    description: Disclosure under Dodd-Frank Section 1502 covering tantalum, tin, tungsten, gold (3TG) sourcing.
+  - term: ECCN
+    description: Export Control Classification Number under U.S. EAR.
+  - term: HTS
+    aliases: [Harmonized Tariff Schedule]
+    description: Tariff classification code used in cross-border trade.
+  - term: Halogen-Free
+    description: Component meeting IEC 61249-2-21 limits on chlorine and bromine.
+  - term: Lead-Free
+    description: Solder/terminations meeting Pb-free requirements under RoHS.
+
+  # ECAD / PCB Design
+  - term: Schematic Symbol
+    aliases: [Symbol]
+    description: Abstract diagrammatic representation of a component used in a schematic.
+  - term: Footprint
+    aliases: [Land Pattern]
+    description: PCB copper / silkscreen / soldermask pattern matching a component package.
+  - term: 3D Model
+    description: STEP / IGES model used in mechanical assembly and clearance checks.
+  - term: ECAD
+    aliases: [Electronic Computer-Aided Design]
+    description: Software for designing schematics and PCBs (Altium, KiCad, Eagle, OrCAD, Cadence, Mentor).
+  - term: MCAD
+    description: Mechanical CAD used to design enclosures and assemblies.
+  - term: Reference Designator
+    aliases: [Ref Des]
+    description: Identifier (R1, C12, U3) marking a component instance on a schematic and PCB.
+
+  # BoM
+  - term: Bill of Materials
+    aliases: [BoM, BOM]
+    description: Ordered list of every component required to build one unit of a hardware product.
+  - term: Alternate Part
+    aliases: [AML, Approved Manufacturer List, AVL, Approved Vendor List]
+    description: An MPN/manufacturer pair acceptable in place of the preferred part on a BoM line.
+  - term: Do Not Populate
+    aliases: [DNP, DNI, Do Not Install]
+    description: BoM line that should not be populated during assembly.
+
+  # IoT / Hardware operations
+  - term: Device Registry
+    description: Cloud-side directory of provisioned hardware devices and their metadata.
+  - term: Device Twin
+    aliases: [Device Shadow]
+    description: Mirror of a device's reported and desired state held in the cloud.
+  - term: OTA
+    aliases: [Over the Air]
+    description: Firmware update delivered to deployed hardware without physical access.
+  - term: MQTT
+    description: Lightweight publish-subscribe protocol used for IoT device-to-cloud telemetry.
+  - term: Provisioning
+    description: Initial onboarding of a device into a cloud platform with credentials and identity.
