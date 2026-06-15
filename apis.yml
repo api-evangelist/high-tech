@@ -29,290 +29,292 @@ created: '2026-05-23'
 modified: '2026-05-23'
 specificationVersion: '0.20'
 tags:
-  - Arrow Electronics
-  - Availability
-  - Bill of Materials
-  - BoM
+- Arrow Electronics
+- Availability
+- Bill of Materials
+- BoM
+- Component Data
+- Datasheets
+- Digi-Key
+- Distributors
+- ECAD
+- Electronic Components
+- Electronics
+- Footprints
+- Hardware
+- High Tech
+- IoT
+- Lifecycle
+- Manufacturer Part Number
+- Manufacturers
+- Mouser
+- MPN
+- Nexar
+- Octopart
+- PCB Design
+- Pricing
+- RoHS
+- Semiconductors
+- SnapEDA
+- Supply Chain
+- Symbols
+- Ultra Librarian
+apis:
+- aid: high-tech:octopart-nexar
+  name: Octopart / Nexar Supply API
+  description: >-
+    Nexar Supply (formerly Octopart API v4) is a GraphQL API that
+    aggregates electronic component data from manufacturers and
+    distributors worldwide. Returns parts, manufacturers, sellers,
+    offers, datasheets, lifecycle status, compliance, and CAD
+    models for tens of millions of MPNs. Free Evaluation plan up
+    to 100 matched parts; Enterprise plans for production use.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://nexar.com/api
+  baseURL: https://api.nexar.com/graphql
+  tags:
   - Component Data
-  - Datasheets
-  - Digi-Key
   - Distributors
-  - ECAD
-  - Electronic Components
-  - Electronics
-  - Footprints
-  - Hardware
-  - High Tech
-  - IoT
-  - Lifecycle
-  - Manufacturer Part Number
-  - Manufacturers
-  - Mouser
-  - MPN
+  - GraphQL
   - Nexar
   - Octopart
-  - PCB Design
-  - Pricing
-  - RoHS
-  - Semiconductors
-  - SnapEDA
   - Supply Chain
+  properties:
+  - type: Documentation
+    url: https://nexar.com/api
+  - type: Portal
+    url: https://portal.nexar.com/
+  - type: Pricing
+    url: https://nexar.com/api/compare-plans
+  - type: GraphQLEndpoint
+    url: https://api.nexar.com/graphql
+  - url: graphql/high-tech-graphql.md
+    type: GraphQL
+- aid: high-tech:digi-key
+  name: Digi-Key Product Information API
+  description: >-
+    Digi-Key's developer portal exposes a suite of OAuth 2.0 APIs
+    including Product Information V4 (search by MPN, description,
+    manufacturer, category), Quote, Ordering, Order Status, Order
+    Management, MyLists, Supply Chain, Product Change
+    Notifications, and Barcode. Sandbox and production
+    environments separated; supports two-legged and three-legged
+    OAuth flows.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://developer.digikey.com/products
+  baseURL: https://api.digikey.com
+  tags:
+  - Digi-Key
+  - Distributors
+  - OAuth
+  - Ordering
+  - Product Information
+  properties:
+  - type: Documentation
+    url: https://developer.digikey.com/products
+  - type: Portal
+    url: https://developer.digikey.com/
+  - type: OAuthAuthorization
+    url: https://api.digikey.com/v1/oauth2/authorize
+  - type: OAuthToken
+    url: https://api.digikey.com/v1/oauth2/token
+- aid: high-tech:mouser
+  name: Mouser Electronics Search API
+  description: >-
+    Mouser Electronics exposes a REST Search API (SearchByPartNumber,
+    SearchByKeyword, SearchByManufacturer), a Cart API, and an
+    Order API. Authentication uses a per-application API key
+    issued through Mouser's developer portal. Responses include
+    MouserPartNumber, ManufacturerPartNumber, Manufacturer,
+    Description, DataSheetUrl, ProductDetailUrl, Category,
+    Availability, LeadTime, and PriceBreaks.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://www.mouser.com/api-search/
+  baseURL: https://api.mouser.com
+  tags:
+  - API Key
+  - Distributors
+  - Mouser
+  - REST
+  - Search
+  properties:
+  - type: Documentation
+    url: https://www.mouser.com/api-search/
+  - type: Portal
+    url: https://www.mouser.com/api-hub/
+  - type: OrderAPI
+    url: https://www.mouser.com/api-order/
+- aid: high-tech:arrow
+  name: Arrow Electronics Pricing & Availability API
+  description: >-
+    Arrow Electronics provides a Pricing & Availability API and an
+    Order API. Responses returned as JSON (XML available). Partners
+    request an authorization key through Arrow's developer
+    onboarding. A Quote API is marked "Coming soon".
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://developers.arrow.com/api/
+  baseURL: https://api.arrow.com
+  tags:
+  - Arrow Electronics
+  - Distributors
+  - Ordering
+  - Pricing
+  - REST
+  properties:
+  - type: Documentation
+    url: https://developers.arrow.com/api/
+  - type: Portal
+    url: https://developers.arrow.com/
+- aid: high-tech:avnet
+  name: Avnet Developer APIs
+  description: >-
+    Avnet provides distributor APIs for part search, pricing,
+    availability, and order management, primarily for established
+    partner accounts.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://www.avnet.com/
+  tags:
+  - Avnet
+  - Distributors
+  - Pricing
+  properties:
+  - type: Homepage
+    url: https://www.avnet.com/
+- aid: high-tech:newark-element14
+  name: Newark / element14 API
+  description: >-
+    Newark and element14 (Premier Farnell) expose component search
+    and pricing data via partner APIs for hardware engineers and
+    maker communities.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://www.newark.com/
+  tags:
+  - Distributors
+  - element14
+  - Newark
+  properties:
+  - type: Homepage
+    url: https://www.newark.com/
+- aid: high-tech:snapeda
+  name: SnapEDA Symbols & Footprints API
+  description: >-
+    SnapEDA is a library of free CAD models for electronic
+    components — schematic symbols, PCB footprints, and 3D models
+    — keyed off manufacturer part numbers. Used by PCB design
+    tools to auto-resolve CAD assets for a BoM.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://www.snapeda.com/home/
+  tags:
+  - 3D Models
+  - ECAD
+  - Footprints
+  - PCB Design
+  - SnapEDA
+  - Symbols
+  properties:
+  - type: Homepage
+    url: https://www.snapeda.com/home/
+- aid: high-tech:ultra-librarian
+  name: Ultra Librarian ECAD API
+  description: >-
+    Ultra Librarian (an EMA Design Automation service) publishes
+    symbols, footprints, and 3D models for over 16 million
+    components, with integrations to major ECAD tools.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://www.ultralibrarian.com/
+  tags:
+  - 3D Models
+  - ECAD
+  - Footprints
   - Symbols
   - Ultra Librarian
-apis:
-  - aid: high-tech:octopart-nexar
-    name: Octopart / Nexar Supply API
-    description: >-
-      Nexar Supply (formerly Octopart API v4) is a GraphQL API that
-      aggregates electronic component data from manufacturers and
-      distributors worldwide. Returns parts, manufacturers, sellers,
-      offers, datasheets, lifecycle status, compliance, and CAD
-      models for tens of millions of MPNs. Free Evaluation plan up
-      to 100 matched parts; Enterprise plans for production use.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    humanURL: https://nexar.com/api
-    baseURL: https://api.nexar.com/graphql
-    tags:
-      - Component Data
-      - Distributors
-      - GraphQL
-      - Nexar
-      - Octopart
-      - Supply Chain
-    properties:
-      - type: Documentation
-        url: https://nexar.com/api
-      - type: Portal
-        url: https://portal.nexar.com/
-      - type: Pricing
-        url: https://nexar.com/api/compare-plans
-      - type: GraphQLEndpoint
-        url: https://api.nexar.com/graphql
-  - aid: high-tech:digi-key
-    name: Digi-Key Product Information API
-    description: >-
-      Digi-Key's developer portal exposes a suite of OAuth 2.0 APIs
-      including Product Information V4 (search by MPN, description,
-      manufacturer, category), Quote, Ordering, Order Status, Order
-      Management, MyLists, Supply Chain, Product Change
-      Notifications, and Barcode. Sandbox and production
-      environments separated; supports two-legged and three-legged
-      OAuth flows.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.digikey.com/products
-    baseURL: https://api.digikey.com
-    tags:
-      - Digi-Key
-      - Distributors
-      - OAuth
-      - Ordering
-      - Product Information
-    properties:
-      - type: Documentation
-        url: https://developer.digikey.com/products
-      - type: Portal
-        url: https://developer.digikey.com/
-      - type: OAuthAuthorization
-        url: https://api.digikey.com/v1/oauth2/authorize
-      - type: OAuthToken
-        url: https://api.digikey.com/v1/oauth2/token
-  - aid: high-tech:mouser
-    name: Mouser Electronics Search API
-    description: >-
-      Mouser Electronics exposes a REST Search API (SearchByPartNumber,
-      SearchByKeyword, SearchByManufacturer), a Cart API, and an
-      Order API. Authentication uses a per-application API key
-      issued through Mouser's developer portal. Responses include
-      MouserPartNumber, ManufacturerPartNumber, Manufacturer,
-      Description, DataSheetUrl, ProductDetailUrl, Category,
-      Availability, LeadTime, and PriceBreaks.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    humanURL: https://www.mouser.com/api-search/
-    baseURL: https://api.mouser.com
-    tags:
-      - API Key
-      - Distributors
-      - Mouser
-      - REST
-      - Search
-    properties:
-      - type: Documentation
-        url: https://www.mouser.com/api-search/
-      - type: Portal
-        url: https://www.mouser.com/api-hub/
-      - type: OrderAPI
-        url: https://www.mouser.com/api-order/
-  - aid: high-tech:arrow
-    name: Arrow Electronics Pricing & Availability API
-    description: >-
-      Arrow Electronics provides a Pricing & Availability API and an
-      Order API. Responses returned as JSON (XML available). Partners
-      request an authorization key through Arrow's developer
-      onboarding. A Quote API is marked "Coming soon".
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    humanURL: https://developers.arrow.com/api/
-    baseURL: https://api.arrow.com
-    tags:
-      - Arrow Electronics
-      - Distributors
-      - Ordering
-      - Pricing
-      - REST
-    properties:
-      - type: Documentation
-        url: https://developers.arrow.com/api/
-      - type: Portal
-        url: https://developers.arrow.com/
-  - aid: high-tech:avnet
-    name: Avnet Developer APIs
-    description: >-
-      Avnet provides distributor APIs for part search, pricing,
-      availability, and order management, primarily for established
-      partner accounts.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    humanURL: https://www.avnet.com/
-    tags:
-      - Avnet
-      - Distributors
-      - Pricing
-    properties:
-      - type: Homepage
-        url: https://www.avnet.com/
-  - aid: high-tech:newark-element14
-    name: Newark / element14 API
-    description: >-
-      Newark and element14 (Premier Farnell) expose component search
-      and pricing data via partner APIs for hardware engineers and
-      maker communities.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    humanURL: https://www.newark.com/
-    tags:
-      - Distributors
-      - element14
-      - Newark
-    properties:
-      - type: Homepage
-        url: https://www.newark.com/
-  - aid: high-tech:snapeda
-    name: SnapEDA Symbols & Footprints API
-    description: >-
-      SnapEDA is a library of free CAD models for electronic
-      components — schematic symbols, PCB footprints, and 3D models
-      — keyed off manufacturer part numbers. Used by PCB design
-      tools to auto-resolve CAD assets for a BoM.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    humanURL: https://www.snapeda.com/home/
-    tags:
-      - 3D Models
-      - ECAD
-      - Footprints
-      - PCB Design
-      - SnapEDA
-      - Symbols
-    properties:
-      - type: Homepage
-        url: https://www.snapeda.com/home/
-  - aid: high-tech:ultra-librarian
-    name: Ultra Librarian ECAD API
-    description: >-
-      Ultra Librarian (an EMA Design Automation service) publishes
-      symbols, footprints, and 3D models for over 16 million
-      components, with integrations to major ECAD tools.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    humanURL: https://www.ultralibrarian.com/
-    tags:
-      - 3D Models
-      - ECAD
-      - Footprints
-      - Symbols
-      - Ultra Librarian
-    properties:
-      - type: Homepage
-        url: https://www.ultralibrarian.com/
-  - aid: high-tech:altium-365
-    name: Altium 365 / Nexar Design API
-    description: >-
-      Nexar Design exposes Altium 365 workspace data — components,
-      nets, MCAD geometry, and positional data — via GraphQL for
-      programmatic access to PCB designs.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    humanURL: https://nexar.com/api
-    baseURL: https://api.nexar.com/graphql
-    tags:
-      - Altium 365
-      - Design
-      - GraphQL
-      - Nexar
-      - PCB Design
-    properties:
-      - type: Documentation
-        url: https://nexar.com/api
-  - aid: high-tech:aws-iot-core
-    name: AWS IoT Core
-    description: >-
-      AWS IoT Core provides device registry, MQTT message broker,
-      device shadow, jobs, and rules engine for connected hardware
-      at scale. Anchors the AWS IoT family (Device Management,
-      Device Defender, Events, FleetWise, Greengrass, SiteWise,
-      TwinMaker).
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    humanURL: https://aws.amazon.com/iot-core/
-    tags:
-      - AWS
-      - Device Management
-      - IoT
-      - MQTT
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/iot/
-  - aid: high-tech:azure-iot-hub
-    name: Microsoft Azure IoT Hub
-    description: >-
-      Azure IoT Hub provides bi-directional device-to-cloud and
-      cloud-to-device messaging, device twins, direct methods, and
-      device provisioning service (DPS).
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    humanURL: https://azure.microsoft.com/en-us/products/iot-hub/
-    tags:
-      - Azure
-      - Device Twins
-      - IoT
-      - MQTT
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/azure/iot-hub/
-  - aid: high-tech:particle
-    name: Particle Device Cloud API
-    description: >-
-      Particle provides a Device Cloud REST API plus webhooks for
-      managing cellular and Wi-Fi connected hardware, firmware OTA,
-      and variable / function / event APIs against devices.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    humanURL: https://docs.particle.io/reference/cloud-apis/api/
-    baseURL: https://api.particle.io
-    tags:
-      - Device Cloud
-      - IoT
-      - OTA
-      - Particle
-      - REST
-      - Webhooks
-    properties:
-      - type: Documentation
-        url: https://docs.particle.io/reference/cloud-apis/api/
+  properties:
+  - type: Homepage
+    url: https://www.ultralibrarian.com/
+- aid: high-tech:altium-365
+  name: Altium 365 / Nexar Design API
+  description: >-
+    Nexar Design exposes Altium 365 workspace data — components,
+    nets, MCAD geometry, and positional data — via GraphQL for
+    programmatic access to PCB designs.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://nexar.com/api
+  baseURL: https://api.nexar.com/graphql
+  tags:
+  - Altium 365
+  - Design
+  - GraphQL
+  - Nexar
+  - PCB Design
+  properties:
+  - type: Documentation
+    url: https://nexar.com/api
+- aid: high-tech:aws-iot-core
+  name: AWS IoT Core
+  description: >-
+    AWS IoT Core provides device registry, MQTT message broker,
+    device shadow, jobs, and rules engine for connected hardware
+    at scale. Anchors the AWS IoT family (Device Management,
+    Device Defender, Events, FleetWise, Greengrass, SiteWise,
+    TwinMaker).
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://aws.amazon.com/iot-core/
+  tags:
+  - AWS
+  - Device Management
+  - IoT
+  - MQTT
+  properties:
+  - type: Documentation
+    url: https://docs.aws.amazon.com/iot/
+- aid: high-tech:azure-iot-hub
+  name: Microsoft Azure IoT Hub
+  description: >-
+    Azure IoT Hub provides bi-directional device-to-cloud and
+    cloud-to-device messaging, device twins, direct methods, and
+    device provisioning service (DPS).
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://azure.microsoft.com/en-us/products/iot-hub/
+  tags:
+  - Azure
+  - Device Twins
+  - IoT
+  - MQTT
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/azure/iot-hub/
+- aid: high-tech:particle
+  name: Particle Device Cloud API
+  description: >-
+    Particle provides a Device Cloud REST API plus webhooks for
+    managing cellular and Wi-Fi connected hardware, firmware OTA,
+    and variable / function / event APIs against devices.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.particle.io/reference/cloud-apis/api/
+  baseURL: https://api.particle.io
+  tags:
+  - Device Cloud
+  - IoT
+  - OTA
+  - Particle
+  - REST
+  - Webhooks
+  properties:
+  - type: Documentation
+    url: https://docs.particle.io/reference/cloud-apis/api/
 common:
-  - type: ComponentSchema
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/high-tech/refs/heads/main/json-schema/high-tech-component-schema.json
-  - type: ComponentStructure
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/high-tech/refs/heads/main/json-structure/high-tech-component-structure.json
-  - type: JSONLDContext
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/high-tech/refs/heads/main/json-ld/high-tech-context.jsonld
-  - type: Vocabulary
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/high-tech/refs/heads/main/vocabulary/high-tech-vocabulary.yml
-  - type: Examples
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/high-tech/refs/heads/main/examples/
+- type: ComponentSchema
+  url: >-
+    https://raw.githubusercontent.com/api-evangelist/high-tech/refs/heads/main/json-schema/high-tech-component-schema.json
+- type: ComponentStructure
+  url: >-
+    https://raw.githubusercontent.com/api-evangelist/high-tech/refs/heads/main/json-structure/high-tech-component-structure.json
+- type: JSONLDContext
+  url: >-
+    https://raw.githubusercontent.com/api-evangelist/high-tech/refs/heads/main/json-ld/high-tech-context.jsonld
+- type: Vocabulary
+  url: >-
+    https://raw.githubusercontent.com/api-evangelist/high-tech/refs/heads/main/vocabulary/high-tech-vocabulary.yml
+- type: Examples
+  url: >-
+    https://raw.githubusercontent.com/api-evangelist/high-tech/refs/heads/main/examples/
