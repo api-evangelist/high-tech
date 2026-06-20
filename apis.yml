@@ -21,7 +21,7 @@ description: >-
   supply chain.
 url: >-
   https://raw.githubusercontent.com/api-evangelist/high-tech/refs/heads/main/apis.yml
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 type: Index
 access: 3rd-Party
 position: Reference
@@ -69,7 +69,7 @@ apis:
     offers, datasheets, lifecycle status, compliance, and CAD
     models for tens of millions of MPNs. Free Evaluation plan up
     to 100 matched parts; Enterprise plans for production use.
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://nexar.com/api
   baseURL: https://api.nexar.com/graphql
   tags:
@@ -100,7 +100,7 @@ apis:
     Notifications, and Barcode. Sandbox and production
     environments separated; supports two-legged and three-legged
     OAuth flows.
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://developer.digikey.com/products
   baseURL: https://api.digikey.com
   tags:
@@ -128,7 +128,7 @@ apis:
     MouserPartNumber, ManufacturerPartNumber, Manufacturer,
     Description, DataSheetUrl, ProductDetailUrl, Category,
     Availability, LeadTime, and PriceBreaks.
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://www.mouser.com/api-search/
   baseURL: https://api.mouser.com
   tags:
@@ -151,7 +151,7 @@ apis:
     Order API. Responses returned as JSON (XML available). Partners
     request an authorization key through Arrow's developer
     onboarding. A Quote API is marked "Coming soon".
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://developers.arrow.com/api/
   baseURL: https://api.arrow.com
   tags:
@@ -171,7 +171,7 @@ apis:
     Avnet provides distributor APIs for part search, pricing,
     availability, and order management, primarily for established
     partner accounts.
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://www.avnet.com/
   tags:
   - Avnet
@@ -186,7 +186,7 @@ apis:
     Newark and element14 (Premier Farnell) expose component search
     and pricing data via partner APIs for hardware engineers and
     maker communities.
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://www.newark.com/
   tags:
   - Distributors
@@ -202,7 +202,7 @@ apis:
     components — schematic symbols, PCB footprints, and 3D models
     — keyed off manufacturer part numbers. Used by PCB design
     tools to auto-resolve CAD assets for a BoM.
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://www.snapeda.com/home/
   tags:
   - 3D Models
@@ -220,7 +220,7 @@ apis:
     Ultra Librarian (an EMA Design Automation service) publishes
     symbols, footprints, and 3D models for over 16 million
     components, with integrations to major ECAD tools.
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://www.ultralibrarian.com/
   tags:
   - 3D Models
@@ -237,7 +237,7 @@ apis:
     Nexar Design exposes Altium 365 workspace data — components,
     nets, MCAD geometry, and positional data — via GraphQL for
     programmatic access to PCB designs.
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://nexar.com/api
   baseURL: https://api.nexar.com/graphql
   tags:
@@ -257,7 +257,7 @@ apis:
     at scale. Anchors the AWS IoT family (Device Management,
     Device Defender, Events, FleetWise, Greengrass, SiteWise,
     TwinMaker).
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://aws.amazon.com/iot-core/
   tags:
   - AWS
@@ -273,7 +273,7 @@ apis:
     Azure IoT Hub provides bi-directional device-to-cloud and
     cloud-to-device messaging, device twins, direct methods, and
     device provisioning service (DPS).
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://azure.microsoft.com/en-us/products/iot-hub/
   tags:
   - Azure
@@ -289,7 +289,7 @@ apis:
     Particle provides a Device Cloud REST API plus webhooks for
     managing cellular and Wi-Fi connected hardware, firmware OTA,
     and variable / function / event APIs against devices.
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://docs.particle.io/reference/cloud-apis/api/
   baseURL: https://api.particle.io
   tags:
