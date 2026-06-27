@@ -178,7 +178,7 @@ apis:
   - Distributors
   - Pricing
   properties:
-  - type: Homepage
+  - type: Website
     url: https://www.avnet.com/
 - aid: high-tech:newark-element14
   name: Newark / element14 API
@@ -193,7 +193,7 @@ apis:
   - element14
   - Newark
   properties:
-  - type: Homepage
+  - type: Website
     url: https://www.newark.com/
 - aid: high-tech:snapeda
   name: SnapEDA Symbols & Footprints API
@@ -212,7 +212,7 @@ apis:
   - SnapEDA
   - Symbols
   properties:
-  - type: Homepage
+  - type: Website
     url: https://www.snapeda.com/home/
 - aid: high-tech:ultra-librarian
   name: Ultra Librarian ECAD API
@@ -229,7 +229,7 @@ apis:
   - Symbols
   - Ultra Librarian
   properties:
-  - type: Homepage
+  - type: Website
     url: https://www.ultralibrarian.com/
 - aid: high-tech:altium-365
   name: Altium 365 / Nexar Design API
