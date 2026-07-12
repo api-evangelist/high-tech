@@ -303,6 +303,8 @@ apis:
   - type: Documentation
     url: https://docs.particle.io/reference/cloud-apis/api/
 common:
+- type: DomainSecurity
+  url: security/high-tech-domain-security.yml
 - type: ComponentSchema
   url: >-
     https://raw.githubusercontent.com/api-evangelist/high-tech/refs/heads/main/json-schema/high-tech-component-schema.json
