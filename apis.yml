@@ -43,6 +43,37 @@ tags:
 - Arrow Electronics
 - Availability
 - Bill of Materials
+- BOM
+- Component Data
+- Datasheets
+- Digi-Key
+- Distributors
+- ECAD
+- Electronic Components
+- Electronics
+- Footprints
+- Hardware
+- High Tech
+- IoT
+- Lifecycle
+- Manufacturer Part Number
+- Manufacturers
+- Mouser
+- MPN
+- Nexar
+- Octopart
+- PCB Design
+- Pricing
+- RoHS
+- Semiconductors
+- SnapEDA
+- Supply Chain
+- Symbols
+- Ultra Librarian
+tags_raw:
+- Arrow Electronics
+- Availability
+- Bill of Materials
 - BoM
 - Component Data
 - Datasheets
@@ -117,6 +148,12 @@ apis:
   tags:
   - Digi-Key
   - Distributors
+  - Authentication
+  - Ordering
+  - Product Information
+  tags_raw:
+  - Digi-Key
+  - Distributors
   - OAuth
   - Ordering
   - Product Information
@@ -143,6 +180,12 @@ apis:
   humanURL: https://www.mouser.com/api-search/
   baseURL: https://api.mouser.com
   tags:
+  - APIKeys
+  - Distributors
+  - Mouser
+  - REST
+  - Search
+  tags_raw:
   - API Key
   - Distributors
   - Mouser
@@ -304,6 +347,13 @@ apis:
   humanURL: https://docs.particle.io/reference/cloud-apis/api/
   baseURL: https://api.particle.io
   tags:
+  - Device Cloud
+  - IoT
+  - OTA
+  - Particle
+  - REST
+  - Webhook
+  tags_raw:
   - Device Cloud
   - IoT
   - OTA
