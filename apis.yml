@@ -58,7 +58,7 @@ tags:
 - Component Data
 - Datasheets
 - Digi-Key
-- Distributors
+- Distributor
 - ECAD
 - Electronic Components
 - Electronics
@@ -68,7 +68,7 @@ tags:
 - IoT
 - Lifecycle
 - Manufacturer Part Number
-- Manufacturers
+- Manufacturer
 - Mouser
 - MPN
 - Nexar
@@ -127,6 +127,13 @@ apis:
   baseURL: https://api.nexar.com/graphql
   tags:
   - Component Data
+  - Distributor
+  - GraphQL
+  - Nexar
+  - Octopart
+  - Supply Chain
+  tags_raw:
+  - Component Data
   - Distributors
   - GraphQL
   - Nexar
@@ -158,7 +165,7 @@ apis:
   baseURL: https://api.digikey.com
   tags:
   - Digi-Key
-  - Distributors
+  - Distributor
   - Authentication
   - Ordering
   - Product Information
@@ -192,7 +199,7 @@ apis:
   baseURL: https://api.mouser.com
   tags:
   - APIKeys
-  - Distributors
+  - Distributor
   - Mouser
   - REST
   - Search
@@ -221,6 +228,12 @@ apis:
   baseURL: https://api.arrow.com
   tags:
   - Arrow Electronics
+  - Distributor
+  - Ordering
+  - Pricing
+  - REST
+  tags_raw:
+  - Arrow Electronics
   - Distributors
   - Ordering
   - Pricing
@@ -240,6 +253,10 @@ apis:
   humanURL: https://www.avnet.com/
   tags:
   - Avnet
+  - Distributor
+  - Pricing
+  tags_raw:
+  - Avnet
   - Distributors
   - Pricing
   properties:
@@ -254,6 +271,10 @@ apis:
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://www.newark.com/
   tags:
+  - Distributor
+  - element14
+  - Newark
+  tags_raw:
   - Distributors
   - element14
   - Newark
