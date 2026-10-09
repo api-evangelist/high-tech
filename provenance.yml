@@ -21,6 +21,9 @@ artifacts:
   examples/high-tech-octopart-graphql-search-example.json:
     method: unknown
     evidence: no authorship recorded
+  front-door-ai/2026-09-17.yml:
+    method: unknown
+    evidence: no authorship recorded
   graphql/high-tech-graphql.md:
     method: unknown
     evidence: no authorship recorded
